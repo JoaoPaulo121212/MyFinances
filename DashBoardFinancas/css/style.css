@@ -1,0 +1,134 @@
+:root{
+    --bg-color: #f0f2f5;
+    --text-color: #363f5f;
+    --primary: #4b6cb7;
+    --income: #2ecc71;
+    --expense: #e74c3c;
+    --white: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+header{
+    background: linear-gradient(135deg, #182848, #4b6cb7);
+    padding: 2rem 0 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.container{
+    max-width: 800px;
+    margin: -6rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.resume-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card{
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h3{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card.total{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.money{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.money.plus{ color: var(--income); }
+.money.minus{ color: var(--expense); }
+.total .money{color: var(--white);}
+
+.data-grid{
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px){
+    .data-grid{ grid-template-columns: 1fr; }
+}
+
+.chart-container, .transactions-container, .form-container{
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.transactions{
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.transaction li{
+    background: #f8f9fa;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-left: 5px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.transaction li.plus { border-left-color: var(--income);}
+.transaction li.minus { border-left-color: var(--expense);}
+
+.form-control{
+    margin-bottom: 1rem;
+}
+
+label{display: block; margin-bottom: 0.3rem;}
+
+input{
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #d2d2d2;
+    border-radius: 0.3rem;
+}
+
+.btn{
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.btn:hover{
+    filter: brightness(0.9);
+}

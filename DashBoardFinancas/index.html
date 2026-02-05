@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Finance | Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/jpeg" href="./images/favicon.jpeg">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>MyFinance</h1>
+    </header>
+
+    <main class="container">
+        <section class="resume-container">
+            <div class="card">
+                <h3>Entradas</h3>
+                <p id="incomeDisplay" class="money plus">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Saídas</h3>
+                <p id="expenseDisplay" class="money minus">R$ 0,00</p>
+            </div>
+            <div class="card total">
+                <h3>Saldo Total</h3>
+                <p id="balanceDisplay" class="money">R$ 0,00</p>
+            </div>
+        </section>
+        <section class="form-container">
+            <h3>Nova Transação</h3>
+            <form id="form">
+                <div class="form-control">
+                    <label for="text">Descrição</label>
+                    <input type="text" id="text" placeholder="Ex: Salário, Aluguel..." required>
+                </div>
+                <div class="form-control">
+                    <label for="amount">Valor (R$)</label>
+                    <input type="number" step="0.01" id="amount" placeholder="Ex: 150,00" required>
+                    <small>Use '-' para saídas e nada para entradas</small>
+                </div>
+                <button class="btn">Adicionar</button>
+            </form>
+        </section>
+        <section class="data-grind">
+            <div class="chart-container">
+                <h3>Visão Geral</h3>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="transaction-container">
+                <h3>Histórico</h3>
+                <ul id="transactionList" class="transaction">
+                </ul>
+            </div>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
