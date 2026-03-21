@@ -37,7 +37,7 @@ Clone este repositório:
 
 Bash
 
-git clone https://github.com/seu-usuario/my-finance.git
+git clone https://github.com/joatepe12-Dev/MyFinances.git
 Navegue até a pasta do projeto.
 
 Abra o arquivo index.html em qualquer navegador.
@@ -45,4 +45,4 @@ Abra o arquivo index.html em qualquer navegador.
 Nota: Não é necessário instalar dependências, pois a biblioteca Chart.js é carregada via CDN.
 
 👤 Autor
-João Paulo Albuquerque de Almeida Marques - http://www.linkedin.com/in/jo%C3%A3o-paulo-albuquerque-de-almeida-marques-2a6b6b2a8 - https://github.com/JoaoPaulo121212
+João Paulo Albuquerque de Almeida Marques - http://www.linkedin.com/in/joao-paulo-albuquerque-de-almeida-marques-2a6b6b2a8 - https://github.com/jotape12-Dev
